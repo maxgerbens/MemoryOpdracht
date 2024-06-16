@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\AmstelBier.png" />
+    <None Remove="Images\BlauwKaart.jpg" />
+    <None Remove="Images\BrandBier.png" />
+    <None Remove="Images\CoronaBier.png" />
+    <None Remove="Images\HertogBier.png" />
+    <None Remove="Images\KordaatBier.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\AmstelBier.png" />
+    <Resource Include="Images\BlauwKaart.jpg" />
+    <Resource Include="Images\BrandBier.png" />
+    <Resource Include="Images\CoronaBier.png" />
+    <Resource Include="Images\HertogBier.png" />
+    <Resource Include="Images\KordaatBier.png" />
+  </ItemGroup>
+
+</Project>

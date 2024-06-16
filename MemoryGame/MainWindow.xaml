@@ -1,0 +1,29 @@
+﻿<Window x:Class="MemoryGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemoryGame"
+        xmlns:vms="clr-namespace:MemoryGame.ViewModels"
+        xmlns:views="clr-namespace:MemoryGame.UI_s"
+        xmlns:views1="clr-namespace:MemoryGame.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+       <Grid.Resources>
+           <DataTemplate DataType="{x:Type vms:HomePageViewModel}">
+                <views:HomePageView/>
+           </DataTemplate>
+           <DataTemplate DataType="{x:Type vms:MemoryBoardViewModel}">
+               <views:MemoryBoardView/>
+           </DataTemplate>
+           <DataTemplate DataType="{x:Type vms:HighscoresViewModel}">
+               <views1:HighscoresView/>
+           </DataTemplate>
+           <DataTemplate DataType="{x:Type vms:SettingsViewModel}">
+               <views1:SettingsView/>
+           </DataTemplate>
+        </Grid.Resources>
+        <ContentControl Content="{Binding CurrentViewModel}"></ContentControl>
+    </Grid>
+</Window>
